@@ -1,0 +1,27 @@
+<br>
+<div id="contenedor">
+    <div class="card">
+        <form [formGroup]="formLogin">
+        <div class="card-body">
+            
+            <div class="input-group mb-3">
+                <span class="input-group-text">Usuario:</span>
+                <input type="text" [ngClass]="{'Novalido': this.formLogin.controls['usuario'].valid==false }" class="form-control" formControlName="usuario">
+                
+                
+            </div>
+                <div class="unvalid-text" *ngIf="this.formLogin.controls['usuario'].errors">El campo debe tener contenido</div>
+            <br>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Contraseña:</span>
+                <input type="password" class="form-control" formControlName="contrasena" [ngClass]="{'Novalido': this.formLogin.controls['contrasena'].valid==false && this.formLogin.controls['contrasena'].dirty}"> 
+            </div>
+            
+            <div class="unvalid-text" *ngIf="this.formLogin.controls['contrasena'].errors && this.formLogin.controls['contrasena'].dirty">No ha validado bien</div>
+        </div>
+        <div class="card-footer">
+            <button id="button" class="btn btn-primary" [disabled]="!this.formLogin.valid" appBtnOver (click)="iniciarSesion()">Iniciar</button>
+        </div>
+    </form>
+    </div>
+</div>

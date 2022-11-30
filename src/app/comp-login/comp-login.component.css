@@ -1,0 +1,30 @@
+#contenedor{
+    float: left;
+    width: 100%;
+    
+}
+
+.card{
+    margin-top: 7.5%;
+    margin-left: 15%;
+    float: left;
+    width: 70%;
+}
+
+#button{
+    float: right;
+    margin: 3px;
+}
+
+.over{
+    border: 2px solid green;
+}
+
+.Novalido{
+    border: 1px solid red;
+    
+}
+
+.unvalid-text{
+    color: red;
+}
