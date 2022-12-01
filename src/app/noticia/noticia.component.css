@@ -1,0 +1,15 @@
+.card{
+    margin-top: 2.5%;
+    margin-left: 25%;
+    float: left;
+    width: 50%;
+}
+
+#btnDetalles{
+    margin-left: 14px;
+}
+
+.oscuro{
+    background-color: rgb(126, 126, 126);
+    color: white;
+}

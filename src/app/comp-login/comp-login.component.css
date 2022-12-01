@@ -16,8 +16,11 @@
     margin: 3px;
 }
 
+
+
 .over{
-    border: 2px solid green;
+    color: black;
+    background-color: rgb(25, 235, 235);
 }
 
 .Novalido{
@@ -28,3 +31,8 @@
 .unvalid-text{
     color: red;
 }
+
+.oscuro{
+    background-color: rgb(126, 126, 126);
+}
+

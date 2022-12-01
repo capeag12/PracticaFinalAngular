@@ -9,10 +9,16 @@ import { Servicio } from '../servicio.service';
 })
 export class HeaderComponent implements OnInit {
 
+  modoOscuro:boolean = false
   constructor(private servicio:Servicio, private dao:DAOApp) { }
 
   ngOnInit(): void {
+    this.servicio.getOscuroObservable().subscribe(modo=>this.modoOscuro=modo)
+  }
 
+  cambiarModo(){
+    this.servicio.cambiarModo()
+    console.log(this.modoOscuro)
   }
 
 }

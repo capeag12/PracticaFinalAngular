@@ -1,8 +1,8 @@
 .card{
     margin-top: 2.5%;
-    margin-left: 15%;
+    margin-left: 25%;
     float: left;
-    width: 70%;
+    width: 50%;
 }
 
 #button{
@@ -10,10 +10,18 @@
 }
 
 .over{
-    border: 2px solid green;
+    background-color: rgb(25, 235, 235);
 }
-
 #contenedor{
     float: left;
     width: 100%;
+}
+
+.invalid{
+    border: 2px solid red;
+}
+
+.oscuro{
+    background-color: rgb(126, 126, 126);
+    color: white;
 }

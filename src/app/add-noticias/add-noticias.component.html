@@ -1,20 +1,20 @@
 <div id="contenedor">
-   <div class="card">
-      <form  novalidate>
+   <div class="card" [ngClass]="{oscuro: this.observableModo|async}">
+      <form [formGroup]="formAdd"  novalidate>
       <div class="card-body">
          <label>
                Título:
          </label>
          <br>
-         <input class="form-control" type="text" formControlName="titulo">
+         <input [ngClass]="{invalid: this.formAdd.controls['titulo'].invalid==true && this.formAdd.controls['titulo'].dirty }" class="form-control" type="text" formControlName="titulo">
          
          <label>
                Contenido:
          </label>
-         <input class="form-control" type="text" formControlName="contenido">
+         <input [ngClass]="{invalid: this.formAdd.controls['contenido'].invalid==true && this.formAdd.controls['contenido'].dirty }" class="form-control" type="text" formControlName="contenido">
       </div>
       <div class="card-footer">
-         <button id="button" class="btn btn-primary" (click)="addNoticia()" appBtnOver>Añadir</button>
+         <button id="button" class="btn btn-primary" [disabled]="this.formAdd.invalid" (click)="addNoticia()" appBtnOver>Añadir</button> 
       </div>
    </form>
    </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { DAOApp } from '../daoapp.service';
@@ -11,6 +11,8 @@ import { Servicio } from '../servicio.service';
 })
 export class CompLoginComponent implements OnInit {
 
+    modo:boolean = false
+
   formLogin!:FormGroup
   constructor(private dao:DAOApp, private servicio:Servicio, private router:Router) { }
 
@@ -19,6 +21,8 @@ export class CompLoginComponent implements OnInit {
       usuario: new FormControl("",[Validators.required]),
       contrasena:new FormControl("",[Validators.required,Validators.minLength(8)])
     })
+
+    this.servicio.getOscuroObservable().subscribe(mode => this.modo=mode)
   }
 
   public iniciarSesion():void{

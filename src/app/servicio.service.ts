@@ -1,4 +1,5 @@
 import { Injectable} from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 import { Usuario } from './usuario';
 
 
@@ -7,24 +8,33 @@ import { Usuario } from './usuario';
 })
 export class Servicio {
   private usuarioConectado!:Usuario
-  private modoOscuro:boolean = false
+  public modoOscuro:boolean = false;
+  private modoOscuroSubject!:Subject<boolean>;
   
   
   constructor() {
+    this.modoOscuroSubject = new Subject<boolean>()
     
-   }
-
-   private cambiarModo(){
-    if (this.modoOscuro==true) {
-        this.modoOscuro=false
-    }
-    else{
-        this.modoOscuro=true
-    }
+    this.modoOscuroSubject.next(this.modoOscuro)
    }
 
    public get UsuarioConectado() : Usuario {
     return this.usuarioConectado;
+   }
+
+   public getOscuroObservable(){
+    return this.modoOscuroSubject.asObservable()
+   }
+
+   cambiarModo(){
+    
+      if (this.modoOscuro==true) {
+          this.modoOscuro=false
+      }
+      else{
+          this.modoOscuro=true
+      }
+      this.modoOscuroSubject.next(this.modoOscuro)
    }
    
    
@@ -33,9 +43,9 @@ export class Servicio {
   }
 
   
-  public get ModoOscuro() : boolean {
-    return this.modoOscuro
-  }
+  
+
+  
   
    
    

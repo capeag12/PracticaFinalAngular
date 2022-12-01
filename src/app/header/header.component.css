@@ -1,3 +1,11 @@
 #darkMode{
     float: right;
 }
+
+.modoOscuro{
+    color: white;
+}
+
+.modoClaro{
+    color: black;
+}

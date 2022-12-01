@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(211, 211, 250);
+}
+
+.over{
+    
+    background-color: rgb(25, 235, 235);
+}

@@ -1,11 +1,14 @@
-<div class="card">
+<div class="card" [ngClass]="{oscuro: this.modo}">
     <div class="card-header">
-        {{this.noticia.Titulo | convertirMayus}}
+        <h4>
+            {{this.noticia.Titulo | convertirMayus}}
+        </h4>
+        
     </div>
     <div class="card-body">
         {{this.noticia.Contenido}}
     </div>
     <div class="card-footer">
-        <button class="btn btn-primary">Eliminar</button>
+        <button class="btn btn-danger" (click)="eliminarNoticia()">Eliminar</button> <button id="btnDetalles" class="btn btn-primary">Ver detalles</button>
     </div>
 </div>
