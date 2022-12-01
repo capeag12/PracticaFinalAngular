@@ -1,18 +1,21 @@
-<div class="card">
-    
-    <div class="card-body">
-       <label>
-            Título:
-       </label>
-       <br>
-       <input class="form-control" type="text" name="" id="">
-       
-       <label>
-            Contenido:
-       </label>
-       <input class="form-control" type="text" name="" id="">
-    </div>
-    <div class="card-footer">
-       <button id="button" class="btn btn-primary" appBtnOver>Añadir</button>
-    </div>
+<div id="contenedor">
+   <div class="card">
+      <form  novalidate>
+      <div class="card-body">
+         <label>
+               Título:
+         </label>
+         <br>
+         <input class="form-control" type="text" formControlName="titulo">
+         
+         <label>
+               Contenido:
+         </label>
+         <input class="form-control" type="text" formControlName="contenido">
+      </div>
+      <div class="card-footer">
+         <button id="button" class="btn btn-primary" (click)="addNoticia()" appBtnOver>Añadir</button>
+      </div>
+   </form>
+   </div>
 </div>

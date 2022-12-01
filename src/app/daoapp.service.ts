@@ -37,6 +37,9 @@ export class DAOApp {
     this.listaNoticiasSubject.next([...this.listaNoticias])
   }
 
+  public obtenerNoticia(index:number):Noticia{
+    return this.listaNoticias[index]
+  }
 
 
   public getNoticiasObservable():Observable<Noticia[]>{

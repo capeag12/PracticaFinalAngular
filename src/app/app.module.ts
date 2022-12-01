@@ -9,6 +9,7 @@ import { BtnOverDirective } from './btn-over.directive';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { AddNoticiasComponent } from './add-noticias/add-noticias.component';
 import { ConvertirMayusPipe } from './convertir-mayus.pipe';
+import { NoticiaComponent } from './noticia/noticia.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ConvertirMayusPipe } from './convertir-mayus.pipe';
     NoticiasComponent,
     AddNoticiasComponent,
     ConvertirMayusPipe,
+    NoticiaComponent,
     
     
   ],

@@ -12,3 +12,8 @@
 .over{
     border: 2px solid green;
 }
+
+#contenedor{
+    float: left;
+    width: 100%;
+}

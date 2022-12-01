@@ -33,6 +33,8 @@ export class CompLoginComponent implements OnInit {
       this.router.navigate(['noticias'])
 
     }
+
+    this.formLogin.reset()
   }
 
 }
