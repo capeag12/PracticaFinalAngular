@@ -11,6 +11,7 @@ import { AddNoticiasComponent } from './add-noticias/add-noticias.component';
 import { ConvertirMayusPipe } from './convertir-mayus.pipe';
 import { NoticiaComponent } from './noticia/noticia.component';
 import { DetallesNoticiaComponent } from './detalles-noticia/detalles-noticia.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { DetallesNoticiaComponent } from './detalles-noticia/detalles-noticia.co
     ConvertirMayusPipe,
     NoticiaComponent,
     DetallesNoticiaComponent,
+    NotFoundComponent,
     
     
   ],

@@ -1,0 +1,20 @@
+#contenido{
+    float: left;
+    width: 100%;
+
+}
+
+#noticia{
+    float: left;
+    margin-top: 3%;
+    margin-left: 12.5%;
+}
+
+.card{
+    width: 30%;
+}
+
+.oscuro{
+    background-color: rgb(126, 126, 126);
+    color: white;
+}

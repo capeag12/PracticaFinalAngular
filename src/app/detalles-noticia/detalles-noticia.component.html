@@ -1,1 +1,15 @@
-<p>detalles-noticia works!</p>
+<div id="contenido">
+    <div id="noticia" class="card" [ngClass]="{'oscuro': this.modo==true}">
+        <div class="card-header">
+            <h1>{{noticia.Titulo}}</h1>
+        </div>
+        <div class="card-body">
+            {{noticia.Contenido}}
+        </div>
+        <div class="card-footer">
+            {{noticia.FechaCreacion | date:'dd/LL/YYYY HH:mm' }}
+        </div>
+        
+    </div>
+    
+</div>

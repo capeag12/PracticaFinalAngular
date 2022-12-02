@@ -1,5 +1,5 @@
 import { Injectable} from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Usuario } from './usuario';
 
 
@@ -9,11 +9,11 @@ import { Usuario } from './usuario';
 export class Servicio {
   private usuarioConectado!:Usuario
   public modoOscuro:boolean = false;
-  private modoOscuroSubject!:Subject<boolean>;
+  private modoOscuroSubject!:BehaviorSubject<boolean>;
   
   
   constructor() {
-    this.modoOscuroSubject = new Subject<boolean>()
+    this.modoOscuroSubject = new BehaviorSubject<boolean>(this.modoOscuro)
     
     this.modoOscuroSubject.next(this.modoOscuro)
    }

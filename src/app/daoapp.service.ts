@@ -14,7 +14,7 @@ export class DAOApp {
   
   constructor() {
     this.listaNoticias=[];
-    this.listaNoticias.push(new Noticia("Titulo noticia 1","Contenido noticia 1"))
+    this.listaNoticias.push(new Noticia("Titulo noticia 1","Contenido noticia 1 Contenido noticia 1 Contenido noticia 1 Contenido noticia 1 Contenido noticia 1"))
 
     this.listaUsuario = []
     this.listaUsuario.push(new Usuario("usuario1","contrasenaUsuario1"))
@@ -48,6 +48,13 @@ export class DAOApp {
 
   public getUsuariosObservable():Observable<Usuario[]>{
     return this.listaUsuarioSubject.asObservable();
+  }
+
+  public comprobarIDNoticiaExiste(index:number){
+    if (this.listaNoticias.length > index) {
+      return true
+    }
+    else return false
   }
 
   public comprobarUsuarioContrasena(usuario:string, contra:string):Usuario{

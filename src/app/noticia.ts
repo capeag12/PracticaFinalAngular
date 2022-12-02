@@ -20,7 +20,7 @@ export class Noticia {
     }
 
     
-    public get FechaCreación() : Date {
+    public get FechaCreacion() : Date {
         return this.fechaCreacion;
     }
     
