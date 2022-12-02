@@ -10,6 +10,7 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { AddNoticiasComponent } from './add-noticias/add-noticias.component';
 import { ConvertirMayusPipe } from './convertir-mayus.pipe';
 import { NoticiaComponent } from './noticia/noticia.component';
+import { DetallesNoticiaComponent } from './detalles-noticia/detalles-noticia.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { NoticiaComponent } from './noticia/noticia.component';
     AddNoticiasComponent,
     ConvertirMayusPipe,
     NoticiaComponent,
+    DetallesNoticiaComponent,
     
     
   ],

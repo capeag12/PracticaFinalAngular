@@ -28,7 +28,6 @@ export class AddNoticiasComponent implements OnInit {
       titulo:this.cTitulo,
       contenido:this.cContenido
     })
-
     this.observableModo = this.servicio.getOscuroObservable()
   }
 
