@@ -16,4 +16,8 @@ export class BtnOverDirective {
     this.encima=false;
   }
 
+  @HostListener('click') onClick(){
+    this.encima=false
+  }
+
 }
